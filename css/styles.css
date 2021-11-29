@@ -10,16 +10,6 @@
     --clr-icon: #afb1b8;
     --clr-box-hover: rgba(33, 150, 243, 0.9);
 }
-* {
-    box-sizing: border-box;
-}
-*::after,
-*::before,
-*:hover, 
-*:focus {
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 p, h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -55,7 +45,7 @@ body {
 .list {
     list-style: none;
 }
-.link {
+a {
     text-decoration: none;
 }
 .visually-hidden {
@@ -75,16 +65,22 @@ body {
     padding-bottom: 94px;
 }
 /* --------------- HEADER --------------- */
+.nav .active {
+    position: relative;
+    color: var(--clr-hover);
+    
+}
 .nav > .active::after{
+    position: absolute;
+    bottom: -34px;
+    width: 100%;
     content: '';
     display: block;
     height: 4px;
     background-color: #2196F3;
     border-radius: 2px;
 }
-.nav .active {
-    color: var(--clr-hover);
-}
+
 .header {
     border-bottom: 1px solid #ECECEC;
 }
@@ -130,6 +126,9 @@ body {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--clr-grey);
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link:hover,
@@ -146,6 +145,9 @@ body {
 
     display: flex;
     align-items: center;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-data:hover,
 .header-data:focus {
@@ -204,6 +206,9 @@ body {
     border-radius: 4px; 
 
     cursor: pointer;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* --------------- About --------------- */
@@ -289,6 +294,9 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 100%;
     cursor: pointer;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close:hover {
     background-color: rgb(231 231 231 / 20%);
@@ -400,6 +408,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .masters-social-link:hover,
 .masters-social-link:focus {
@@ -411,7 +422,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 /* ------------------- Clients ------------------- */
 .clent-title {
@@ -442,6 +452,9 @@ body {
     border: 1px solid var(--clr-icon);
     box-sizing: border-box;
     border-radius: 4px;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-link:hover,
 .client-link:focus {
@@ -519,7 +532,7 @@ address {
     margin-left: 10px;
 }
 .join-social-link {
-    fill: var(--clr-icon);  
+    fill: var(--clr-white);  
     width: 100%;
     height: 100%;
     background: rgba(255, 255, 255, 0.1);
@@ -528,6 +541,9 @@ address {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .join-social-link:hover,
 .join-social-link:focus {
@@ -536,7 +552,6 @@ address {
     border-radius: 50px;
     display: block;
     background-color: var(--clr-hover);
-    fill: var(--clr-white);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -564,6 +579,8 @@ address {
     letter-spacing: 0.03em;
     color: var(--clr-grey);
     padding: 10px 22px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .categorie-link:hover,
 .categorie-link:focus{
@@ -579,7 +596,11 @@ address {
     position: relative;
     overflow: hidden;
 }
-.box:hover .box-hover {
+.collection-links {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.collection-links:hover .box-hover {
     transform: translateY(0);
 }
 .box-hover {
@@ -601,7 +622,6 @@ address {
     padding: 63px 24px;
 }
 
-
 .collections {
     padding-top: 0;
 }
@@ -616,9 +636,14 @@ address {
     margin-right: 30px;
     margin-bottom: 30px;
 }
-.collection-item:hover,
-.collection-item:focus{
-   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+.categorie-links {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.collection-links:hover,
+.collection-link:focus{
+    display: block;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
                 0px 4px 4px rgba(0, 0, 0, 0.06), 
                 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
